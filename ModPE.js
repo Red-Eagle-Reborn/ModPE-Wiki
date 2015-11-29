@@ -2,10 +2,32 @@ var readExternal = android.os.Environment.getExternalStorageDirectory();
 var musicPlayer = new android.media.MediaPlayer();
 
 R = {
+	setTime:function(t) {
+		if(!R.isNull(t)) Level.setTime(t);
+	},
+	getTime:function() {
+		Level.getTime();
+	},
+	getBlock:function(x,y,z) {
+		if(!R.isNull(x) && !R.isNull(y) && !R.isNull(z)) Level.getTile(x,y,z);
+	},
+	setGm:function(g) {
+		if(!R.isNull(g)) {
+			if(g != "c" || g != "s" || g != "1" || g != "0")
+				Level.setGameMode(g);
+			else {
+				if(g == "c" || g == "1") Level.setGameMode(1);
+				if(g == "s" || g == "0") Level.setGameMode(0);
+			}
+		}
+	},
+	getGm:function() {
+		Level.getGameMode();
+	}
 	getData:function(x,y,z) {
 		if(!R.isNull(x) && !R.isNull(y) && !R.isNull(z)) Level.getData(x,y,z);
 			
-	}
+	},
 	worldDir:function() {
 		Level.getWorldDir();
 	},
