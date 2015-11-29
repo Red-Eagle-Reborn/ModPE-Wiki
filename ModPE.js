@@ -2,7 +2,852 @@ var readExternal = android.os.Environment.getExternalStorageDirectory();
 var musicPlayer = new android.media.MediaPlayer();
 
 R = {
-	
+	newBlock:function(id,name,texture,msid,opq,rntype,color,destroytime,explostionRes,lightlvl,lightopq) {
+		if(!R.isNull(id) && !R.isNull(name) && !R.isNull(texture) && !R.isNull(msid)) {
+			if(R.isNull(opq)) {
+				if(R.isNull(rntype)) {
+					if(R.isNull(color)) {
+						if(R.isNull(destroytime)) {
+							if(R.isNull(explostionRes)) {
+								if(R.isNull(lightlvl)) {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,false,0);
+									} else {
+										Block.defineBlock(id,name,texture,msid,false,0);
+										Block.setLightOpacity(id,lightopq);
+									}
+								} else {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,false,0);
+										Block.setLightLevel(id,lightlvl);
+									} else {
+										Block.defineBlock(id,name,texture,msid,false,0);
+										Block.setLightOpacity(id,lightopq);
+										Block.setLightLevel(id,lightlvl);
+									}
+								}
+							} else {
+								if(R.isNull(lightlvl)) {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,false,0);
+										Block.setExplosionResistance(id,explostionRes);
+									} else {
+										Block.defineBlock(id,name,texture,msid,false,0);
+										Block.setLightOpacity(id,lightopq);
+										Block.setExplosionResistance(id,explostionRes);
+									}
+								} else {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,false,0);
+										Block.setLightLevel(id,lightlvl);
+										Block.setExplosionResistance(id,explostionRes);
+									} else {
+										Block.defineBlock(id,name,texture,msid,false,0);
+										Block.setLightOpacity(id,lightopq);
+										Block.setLightLevel(id,lightlvl);
+										Block.setExplosionResistance(id,explostionRes);
+									}
+								}
+							}
+						} else {
+							if(R.isNull(explostionRes)) {
+								if(R.isNull(lightlvl)) {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,false,0);
+										Block.setDestroyTime(id,destroytime);
+									} else {
+										Block.defineBlock(id,name,texture,msid,false,0);
+										Block.setLightOpacity(id,lightopq);
+										Block.setDestroyTime(id,destroytime);
+									}
+								} else {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,false,0);
+										Block.setLightLevel(id,lightlvl);
+										Block.setDestroyTime(id,destroytime);
+									} else {
+										Block.defineBlock(id,name,texture,msid,false,0);
+										Block.setLightOpacity(id,lightopq);
+										Block.setLightLevel(id,lightlvl);
+										Block.setDestroyTime(id,destroytime);
+									}
+								}
+							} else {
+								if(R.isNull(lightlvl)) {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,false,0);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setDestroyTime(id,destroytime);
+									} else {
+										Block.defineBlock(id,name,texture,msid,false,0);
+										Block.setLightOpacity(id,lightopq);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setDestroyTime(id,destroytime);
+									}
+								} else {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,false,0);
+										Block.setLightLevel(id,lightlvl);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setDestroyTime(id,destroytime);
+									} else {
+										Block.defineBlock(id,name,texture,msid,false,0);
+										Block.setLightOpacity(id,lightopq);
+										Block.setLightLevel(id,lightlvl);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setDestroyTime(id,destroytime);
+									}
+								}
+							}
+						}
+					} else {
+						if(R.isNull(destroytime)) {
+							if(R.isNull(explostionRes)) {
+								if(R.isNull(lightlvl)) {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,false,0);
+										Block.setColor(id,color);
+									} else {
+										Block.defineBlock(id,name,texture,msid,false,0);
+										Block.setLightOpacity(id,lightopq);
+										Block.setColor(id,color);
+									}
+								} else {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,false,0);
+										Block.setLightLevel(id,lightlvl);
+										Block.setColor(id,color);
+									} else {
+										Block.defineBlock(id,name,texture,msid,false,0);
+										Block.setLightOpacity(id,lightopq);
+										Block.setLightLevel(id,lightlvl);
+										Block.setColor(id,color);
+									}
+								}
+							} else {
+								if(R.isNull(lightlvl)) {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,false,0);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setColor(id,color);
+									} else {
+										Block.defineBlock(id,name,texture,msid,false,0);
+										Block.setLightOpacity(id,lightopq);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setColor(id,color);
+									}
+								} else {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,false,0);
+										Block.setLightLevel(id,lightlvl);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setColor(id,color);
+									} else {
+										Block.defineBlock(id,name,texture,msid,false,0);
+										Block.setLightOpacity(id,lightopq);
+										Block.setLightLevel(id,lightlvl);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setColor(id,color);
+									}
+								}
+							}
+						} else {
+							if(R.isNull(explostionRes)) {
+								if(R.isNull(lightlvl)) {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,false,0);
+										Block.setDestroyTime(id,destroytime);
+										Block.setColor(id,color);
+									} else {
+										Block.defineBlock(id,name,texture,msid,false,0);
+										Block.setLightOpacity(id,lightopq);
+										Block.setDestroyTime(id,destroytime);
+										Block.setColor(id,color);
+									}
+								} else {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,false,0);
+										Block.setLightLevel(id,lightlvl);
+										Block.setDestroyTime(id,destroytime);
+										Block.setColor(id,color);
+									} else {
+										Block.defineBlock(id,name,texture,msid,false,0);
+										Block.setLightOpacity(id,lightopq);
+										Block.setLightLevel(id,lightlvl);
+										Block.setDestroyTime(id,destroytime);
+										Block.setColor(id,color);
+									}
+								}
+							} else {
+								if(R.isNull(lightlvl)) {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,false,0);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setDestroyTime(id,destroytime);
+										Block.setColor(id,color);
+									} else {
+										Block.defineBlock(id,name,texture,msid,false,0);
+										Block.setLightOpacity(id,lightopq);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setDestroyTime(id,destroytime);
+										Block.setColor(id,color);
+									}
+								} else {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,false,0);
+										Block.setLightLevel(id,lightlvl);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setDestroyTime(id,destroytime);
+										Block.setColor(id,color);
+									} else {
+										Block.defineBlock(id,name,texture,msid,false,0);
+										Block.setLightOpacity(id,lightopq);
+										Block.setLightLevel(id,lightlvl);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setDestroyTime(id,destroytime);
+										Block.setColor(id,color);
+									}
+								}
+							}
+						}
+					}
+				} else {
+					if(R.isNull(color)) {
+						if(R.isNull(destroytime)) {
+							if(R.isNull(explostionRes)) {
+								if(R.isNull(lightlvl)) {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,false,rntype);
+									} else {
+										Block.defineBlock(id,name,texture,msid,false,rntype);
+										Block.setLightOpacity(id,lightopq);
+									}
+								} else {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,false,rntype);
+										Block.setLightLevel(id,lightlvl);
+									} else {
+										Block.defineBlock(id,name,texture,msid,false,rntype);
+										Block.setLightOpacity(id,lightopq);
+										Block.setLightLevel(id,lightlvl);
+									}
+								}
+							} else {
+								if(R.isNull(lightlvl)) {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,false,rntype);
+										Block.setExplosionResistance(id,explostionRes);
+									} else {
+										Block.defineBlock(id,name,texture,msid,false,rntype);
+										Block.setLightOpacity(id,lightopq);
+										Block.setExplosionResistance(id,explostionRes);
+									}
+								} else {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,false,rntype);
+										Block.setLightLevel(id,lightlvl);
+										Block.setExplosionResistance(id,explostionRes);
+									} else {
+										Block.defineBlock(id,name,texture,msid,false,rntype);
+										Block.setLightOpacity(id,lightopq);
+										Block.setLightLevel(id,lightlvl);
+										Block.setExplosionResistance(id,explostionRes);
+									}
+								}
+							}
+						} else {
+							if(R.isNull(explostionRes)) {
+								if(R.isNull(lightlvl)) {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,false,rntype);
+										Block.setDestroyTime(id,destroytime);
+									} else {
+										Block.defineBlock(id,name,texture,msid,false,rntype);
+										Block.setLightOpacity(id,lightopq);
+										Block.setDestroyTime(id,destroytime);
+									}
+								} else {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,false,rntype);
+										Block.setLightLevel(id,lightlvl);
+										Block.setDestroyTime(id,destroytime);
+									} else {
+										Block.defineBlock(id,name,texture,msid,false,rntype);
+										Block.setLightOpacity(id,lightopq);
+										Block.setLightLevel(id,lightlvl);
+										Block.setDestroyTime(id,destroytime);
+									}
+								}
+							} else {
+								if(R.isNull(lightlvl)) {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,false,rntype);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setDestroyTime(id,destroytime);
+									} else {
+										Block.defineBlock(id,name,texture,msid,false,rntype);
+										Block.setLightOpacity(id,lightopq);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setDestroyTime(id,destroytime);
+									}
+								} else {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,false,rntype);
+										Block.setLightLevel(id,lightlvl);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setDestroyTime(id,destroytime);
+									} else {
+										Block.defineBlock(id,name,texture,msid,false,rntype);
+										Block.setLightOpacity(id,lightopq);
+										Block.setLightLevel(id,lightlvl);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setDestroyTime(id,destroytime);
+									}
+								}
+							}
+						}
+					} else {
+						if(R.isNull(destroytime)) {
+							if(R.isNull(explostionRes)) {
+								if(R.isNull(lightlvl)) {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,false,rntype);
+										Block.setColor(id,color);
+									} else {
+										Block.defineBlock(id,name,texture,msid,false,rntype);
+										Block.setLightOpacity(id,lightopq);
+										Block.setColor(id,color);
+									}
+								} else {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,false,rntype);
+										Block.setLightLevel(id,lightlvl);
+										Block.setColor(id,color);
+									} else {
+										Block.defineBlock(id,name,texture,msid,false,rntype);
+										Block.setLightOpacity(id,lightopq);
+										Block.setLightLevel(id,lightlvl);
+										Block.setColor(id,color);
+									}
+								}
+							} else {
+								if(R.isNull(lightlvl)) {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,false,rntype);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setColor(id,color);
+									} else {
+										Block.defineBlock(id,name,texture,msid,false,rntype);
+										Block.setLightOpacity(id,lightopq);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setColor(id,color);
+									}
+								} else {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,false,rntype);
+										Block.setLightLevel(id,lightlvl);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setColor(id,color);
+									} else {
+										Block.defineBlock(id,name,texture,msid,false,rntype);
+										Block.setLightOpacity(id,lightopq);
+										Block.setLightLevel(id,lightlvl);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setColor(id,color);
+									}
+								}
+							}
+						} else {
+							if(R.isNull(explostionRes)) {
+								if(R.isNull(lightlvl)) {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,false,rntype);
+										Block.setDestroyTime(id,destroytime);
+										Block.setColor(id,color);
+									} else {
+										Block.defineBlock(id,name,texture,msid,false,rntype);
+										Block.setLightOpacity(id,lightopq);
+										Block.setDestroyTime(id,destroytime);
+										Block.setColor(id,color);
+									}
+								} else {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,false,rntype);
+										Block.setLightLevel(id,lightlvl);
+										Block.setDestroyTime(id,destroytime);
+										Block.setColor(id,color);
+									} else {
+										Block.defineBlock(id,name,texture,msid,false,rntype);
+										Block.setLightOpacity(id,lightopq);
+										Block.setLightLevel(id,lightlvl);
+										Block.setDestroyTime(id,destroytime);
+										Block.setColor(id,color);
+									}
+								}
+							} else {
+								if(R.isNull(lightlvl)) {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,false,rntype);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setDestroyTime(id,destroytime);
+										Block.setColor(id,color);
+									} else {
+										Block.defineBlock(id,name,texture,msid,false,rntype);
+										Block.setLightOpacity(id,lightopq);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setDestroyTime(id,destroytime);
+										Block.setColor(id,color);
+									}
+								} else {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,false,rntype);
+										Block.setLightLevel(id,lightlvl);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setDestroyTime(id,destroytime);
+										Block.setColor(id,color);
+									} else {
+										Block.defineBlock(id,name,texture,msid,false,rntype);
+										Block.setLightOpacity(id,lightopq);
+										Block.setLightLevel(id,lightlvl);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setDestroyTime(id,destroytime);
+										Block.setColor(id,color);
+									}
+								}
+							}
+						}
+					}	
+				}
+			} else {
+				if(R.isNull(rntype)) {
+					if(R.isNull(color)) {
+						if(R.isNull(destroytime)) {
+							if(R.isNull(explostionRes)) {
+								if(R.isNull(lightlvl)) {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,opq,0);
+									} else {
+										Block.defineBlock(id,name,texture,msid,opq,0);
+										Block.setLightOpacity(id,lightopq);
+									}
+								} else {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,opq,0);
+										Block.setLightLevel(id,lightlvl);
+									} else {
+										Block.defineBlock(id,name,texture,msid,opq,0);
+										Block.setLightOpacity(id,lightopq);
+										Block.setLightLevel(id,lightlvl);
+									}
+								}
+							} else {
+								if(R.isNull(lightlvl)) {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,opq,0);
+										Block.setExplosionResistance(id,explostionRes);
+									} else {
+										Block.defineBlock(id,name,texture,msid,opq,0);
+										Block.setLightOpacity(id,lightopq);
+										Block.setExplosionResistance(id,explostionRes);
+									}
+								} else {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,opq,0);
+										Block.setLightLevel(id,lightlvl);
+										Block.setExplosionResistance(id,explostionRes);
+									} else {
+										Block.defineBlock(id,name,texture,msid,opq,0);
+										Block.setLightOpacity(id,lightopq);
+										Block.setLightLevel(id,lightlvl);
+										Block.setExplosionResistance(id,explostionRes);
+									}
+								}
+							}
+						} else {
+							if(R.isNull(explostionRes)) {
+								if(R.isNull(lightlvl)) {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,opq,0);
+										Block.setDestroyTime(id,destroytime);
+									} else {
+										Block.defineBlock(id,name,texture,msid,opq,0);
+										Block.setLightOpacity(id,lightopq);
+										Block.setDestroyTime(id,destroytime);
+									}
+								} else {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,opq,0);
+										Block.setLightLevel(id,lightlvl);
+										Block.setDestroyTime(id,destroytime);
+									} else {
+										Block.defineBlock(id,name,texture,msid,opq,0);
+										Block.setLightOpacity(id,lightopq);
+										Block.setLightLevel(id,lightlvl);
+										Block.setDestroyTime(id,destroytime);
+									}
+								}
+							} else {
+								if(R.isNull(lightlvl)) {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,opq,0);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setDestroyTime(id,destroytime);
+									} else {
+										Block.defineBlock(id,name,texture,msid,opq,0);
+										Block.setLightOpacity(id,lightopq);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setDestroyTime(id,destroytime);
+									}
+								} else {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,opq,0);
+										Block.setLightLevel(id,lightlvl);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setDestroyTime(id,destroytime);
+									} else {
+										Block.defineBlock(id,name,texture,msid,opq,0);
+										Block.setLightOpacity(id,lightopq);
+										Block.setLightLevel(id,lightlvl);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setDestroyTime(id,destroytime);
+									}
+								}
+							}
+						}
+					} else {
+						if(R.isNull(destroytime)) {
+							if(R.isNull(explostionRes)) {
+								if(R.isNull(lightlvl)) {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,opq,0);
+										Block.setColor(id,color);
+									} else {
+										Block.defineBlock(id,name,texture,msid,opq,0);
+										Block.setLightOpacity(id,lightopq);
+										Block.setColor(id,color);
+									}
+								} else {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,opq,0);
+										Block.setLightLevel(id,lightlvl);
+										Block.setColor(id,color);
+									} else {
+										Block.defineBlock(id,name,texture,msid,opq,0);
+										Block.setLightOpacity(id,lightopq);
+										Block.setLightLevel(id,lightlvl);
+										Block.setColor(id,color);
+									}
+								}
+							} else {
+								if(R.isNull(lightlvl)) {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,opq,0);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setColor(id,color);
+									} else {
+										Block.defineBlock(id,name,texture,msid,opq,0);
+										Block.setLightOpacity(id,lightopq);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setColor(id,color);
+									}
+								} else {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,opq,0);
+										Block.setLightLevel(id,lightlvl);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setColor(id,color);
+									} else {
+										Block.defineBlock(id,name,texture,msid,opq,0);
+										Block.setLightOpacity(id,lightopq);
+										Block.setLightLevel(id,lightlvl);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setColor(id,color);
+									}
+								}
+							}
+						} else {
+							if(R.isNull(explostionRes)) {
+								if(R.isNull(lightlvl)) {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,opq,0);
+										Block.setDestroyTime(id,destroytime);
+										Block.setColor(id,color);
+									} else {
+										Block.defineBlock(id,name,texture,msid,opq,0);
+										Block.setLightOpacity(id,lightopq);
+										Block.setDestroyTime(id,destroytime);
+										Block.setColor(id,color);
+									}
+								} else {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,opq,0);
+										Block.setLightLevel(id,lightlvl);
+										Block.setDestroyTime(id,destroytime);
+										Block.setColor(id,color);
+									} else {
+										Block.defineBlock(id,name,texture,msid,opq,0);
+										Block.setLightOpacity(id,lightopq);
+										Block.setLightLevel(id,lightlvl);
+										Block.setDestroyTime(id,destroytime);
+										Block.setColor(id,color);
+									}
+								}
+							} else {
+								if(R.isNull(lightlvl)) {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,opq,0);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setDestroyTime(id,destroytime);
+										Block.setColor(id,color);
+									} else {
+										Block.defineBlock(id,name,texture,msid,opq,0);
+										Block.setLightOpacity(id,lightopq);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setDestroyTime(id,destroytime);
+										Block.setColor(id,color);
+									}
+								} else {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,opq,0);
+										Block.setLightLevel(id,lightlvl);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setDestroyTime(id,destroytime);
+										Block.setColor(id,color);
+									} else {
+										Block.defineBlock(id,name,texture,msid,opq,0);
+										Block.setLightOpacity(id,lightopq);
+										Block.setLightLevel(id,lightlvl);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setDestroyTime(id,destroytime);
+										Block.setColor(id,color);
+									}
+								}
+							}
+						}
+					}
+				} else {
+					if(R.isNull(color)) {
+						if(R.isNull(destroytime)) {
+							if(R.isNull(explostionRes)) {
+								if(R.isNull(lightlvl)) {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,opq,rntype);
+									} else {
+										Block.defineBlock(id,name,texture,msid,opq,rntype);
+										Block.setLightOpacity(id,lightopq);
+									}
+								} else {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,opq,rntype);
+										Block.setLightLevel(id,lightlvl);
+									} else {
+										Block.defineBlock(id,name,texture,msid,opq,rntype);
+										Block.setLightOpacity(id,lightopq);
+										Block.setLightLevel(id,lightlvl);
+									}
+								}
+							} else {
+								if(R.isNull(lightlvl)) {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,opq,rntype);
+										Block.setExplosionResistance(id,explostionRes);
+									} else {
+										Block.defineBlock(id,name,texture,msid,opq,rntype);
+										Block.setLightOpacity(id,lightopq);
+										Block.setExplosionResistance(id,explostionRes);
+									}
+								} else {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,opq,rntype);
+										Block.setLightLevel(id,lightlvl);
+										Block.setExplosionResistance(id,explostionRes);
+									} else {
+										Block.defineBlock(id,name,texture,msid,opq,rntype);
+										Block.setLightOpacity(id,lightopq);
+										Block.setLightLevel(id,lightlvl);
+										Block.setExplosionResistance(id,explostionRes);
+									}
+								}
+							}
+						} else {
+							if(R.isNull(explostionRes)) {
+								if(R.isNull(lightlvl)) {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,opq,rntype);
+										Block.setDestroyTime(id,destroytime);
+									} else {
+										Block.defineBlock(id,name,texture,msid,opq,rntype);
+										Block.setLightOpacity(id,lightopq);
+										Block.setDestroyTime(id,destroytime);
+									}
+								} else {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,opq,rntype);
+										Block.setLightLevel(id,lightlvl);
+										Block.setDestroyTime(id,destroytime);
+									} else {
+										Block.defineBlock(id,name,texture,msid,opq,rntype);
+										Block.setLightOpacity(id,lightopq);
+										Block.setLightLevel(id,lightlvl);
+										Block.setDestroyTime(id,destroytime);
+									}
+								}
+							} else {
+								if(R.isNull(lightlvl)) {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,opq,rntype);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setDestroyTime(id,destroytime);
+									} else {
+										Block.defineBlock(id,name,texture,msid,opq,rntype);
+										Block.setLightOpacity(id,lightopq);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setDestroyTime(id,destroytime);
+									}
+								} else {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,opq,rntype);
+										Block.setLightLevel(id,lightlvl);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setDestroyTime(id,destroytime);
+									} else {
+										Block.defineBlock(id,name,texture,msid,opq,rntype);
+										Block.setLightOpacity(id,lightopq);
+										Block.setLightLevel(id,lightlvl);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setDestroyTime(id,destroytime);
+									}
+								}
+							}
+						}
+					} else {
+						if(R.isNull(destroytime)) {
+							if(R.isNull(explostionRes)) {
+								if(R.isNull(lightlvl)) {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,opq,rntype);
+										Block.setColor(id,color);
+									} else {
+										Block.defineBlock(id,name,texture,msid,opq,rntype);
+										Block.setLightOpacity(id,lightopq);
+										Block.setColor(id,color);
+									}
+								} else {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,opq,rntype);
+										Block.setLightLevel(id,lightlvl);
+										Block.setColor(id,color);
+									} else {
+										Block.defineBlock(id,name,texture,msid,opq,rntype);
+										Block.setLightOpacity(id,lightopq);
+										Block.setLightLevel(id,lightlvl);
+										Block.setColor(id,color);
+									}
+								}
+							} else {
+								if(R.isNull(lightlvl)) {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,opq,rntype);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setColor(id,color);
+									} else {
+										Block.defineBlock(id,name,texture,msid,opq,rntype);
+										Block.setLightOpacity(id,lightopq);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setColor(id,color);
+									}
+								} else {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,opq,rntype);
+										Block.setLightLevel(id,lightlvl);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setColor(id,color);
+									} else {
+										Block.defineBlock(id,name,texture,msid,opq,rntype);
+										Block.setLightOpacity(id,lightopq);
+										Block.setLightLevel(id,lightlvl);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setColor(id,color);
+									}
+								}
+							}
+						} else {
+							if(R.isNull(explostionRes)) {
+								if(R.isNull(lightlvl)) {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,opq,rntype);
+										Block.setDestroyTime(id,destroytime);
+										Block.setColor(id,color);
+									} else {
+										Block.defineBlock(id,name,texture,msid,opq,rntype);
+										Block.setLightOpacity(id,lightopq);
+										Block.setDestroyTime(id,destroytime);
+										Block.setColor(id,color);
+									}
+								} else {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,opq,rntype);
+										Block.setLightLevel(id,lightlvl);
+										Block.setDestroyTime(id,destroytime);
+										Block.setColor(id,color);
+									} else {
+										Block.defineBlock(id,name,texture,msid,opq,rntype);
+										Block.setLightOpacity(id,lightopq);
+										Block.setLightLevel(id,lightlvl);
+										Block.setDestroyTime(id,destroytime);
+										Block.setColor(id,color);
+									}
+								}
+							} else {
+								if(R.isNull(lightlvl)) {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,opq,rntype);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setDestroyTime(id,destroytime);
+										Block.setColor(id,color);
+									} else {
+										Block.defineBlock(id,name,texture,msid,opq,rntype);
+										Block.setLightOpacity(id,lightopq);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setDestroyTime(id,destroytime);
+										Block.setColor(id,color);
+									}
+								} else {
+									if(R.isNull(lightopq)) {
+										Block.defineBlock(id,name,texture,msid,opq,rntype);
+										Block.setLightLevel(id,lightlvl);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setDestroyTime(id,destroytime);
+										Block.setColor(id,color);
+									} else {
+										Block.defineBlock(id,name,texture,msid,opq,rntype);
+										Block.setLightOpacity(id,lightopq);
+										Block.setLightLevel(id,lightlvl);
+										Block.setExplosionResistance(id,explostionRes);
+										Block.setDestroyTime(id,destroytime);
+										Block.setColor(id,color);
+									}
+								}
+							}
+						}
+					}	
+				}
+			}
+		}
+	}
+	removeEffect:function(m,e) {
+		if(R.isNull(m)) {
+			if(!R.isNull(e))
+				Entity.removeEffect(R.playerEnt(), e);
+			else 
+				Entity.removeAllEffects(R.playerEnt());
+		} else {
+			if(!R.isNull(e))
+				Entity.removeEffect(m, e);
+			else 
+				Entity.removeAllEffects(m);
+		}
+	}
 	addEffect:function(ent,eff,dur,amp,amb,parts) {
 		if(R.isNull(ent)) {
 			if(!R.isNull(eff)) {
