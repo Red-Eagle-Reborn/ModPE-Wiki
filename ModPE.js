@@ -2,6 +2,55 @@ var readExternal = android.os.Environment.getExternalStorageDirectory();
 var musicPlayer = new android.media.MediaPlayer();
 
 R = {
+	getAge:function(e) {
+		if(!R.isNull(e)) {
+			Entity.getAnimalAge(e);
+		}
+	},
+	setAge:function(e,a) {
+		if(!R.isNull(e) && !R.isNull(a)) {
+			Entity.setAnimalAge(e,a);
+		}
+	},
+	setPitch:function(e,p) {
+		if(!R.isNull(e) && !R.isNull(p)) {
+			Entity.setPitch(e,p);	
+		} else {
+			Entity.setPitch(R.playerEnt(),p);
+		}
+	},
+	setYaw:function(e) {
+		if(!R.isNull(e) && !R.isNull(p)) {
+			Entity.setYaw(e,p);	
+		} else {
+			Entity.setYaw(R.playerEnt(),p);
+		}
+	},
+	getPitch:function(e) {
+		if(!R.isNull(e)) {
+			Entity.getPitch(e);	
+		} else {
+			Entity.getPitch(R.playerEnt());
+		}
+	},
+	getYaw:function(e) {
+		if(!R.isNull(e)) {
+			Entity.getYaw(e);	
+		} else {
+			Entity.getYaw(R.playerEnt());
+		}
+	},
+	ride:function(rider,mount) {
+		if(R.isNull(rider)) {
+			if(!R.isNull(mount)) {
+				Entity.rideAnimal(R.playerEnt(),mount);
+			}
+		} else {
+			if(!R.isNull(mount)) {
+				Entity.rideAnimal(rider,mount);
+			}
+		}
+	},
 	newBlock:function(id,name,texture,msid,opq,rntype,color,destroytime,explostionRes,lightlvl,lightopq) {
 		if(!R.isNull(id) && !R.isNull(name) && !R.isNull(texture) && !R.isNull(msid)) {
 			if(R.isNull(opq)) {
