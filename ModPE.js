@@ -1162,7 +1162,7 @@ R = {
 	z:function() {
 		getPlayerZ();
 	},
-	playerEnt:function(m) {
+	playerEnt:function() {
 		getPlayerEnt();
 	},
 	mobsX:function(m) {
