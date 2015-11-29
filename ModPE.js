@@ -2,66 +2,133 @@ var readExternal = android.os.Environment.getExternalStorageDirectory();
 var musicPlayer = new android.media.MediaPlayer();
 
 R = {
+	
 	addEffect:function(ent,eff,dur,amp,amb,parts) {
 		if(R.isNull(ent)) {
 			if(!R.isNull(eff)) {
-				if(!R.isNull(dur)) {
-					if(!R.isNull(amp)) {
-						if(!R.isNull(amb)) {
-							if(!R.isNull(parts)) {
-								Entity.addEffect(getPlayerEnt(),eff,dur*20,amp,amp,parts);	
+				if(eff == "saturation" || eff == "absorption" || eff === "healthBoost" || eff == "wither" || eff == "poison" || eff == "weakness" || eff=="hunger" || eff === "nightVision" || eff == "blindness" || eff == "invisibility" || eff === "waterBreathing" || eff == "fireResistance" || eff === "damageResistance" || eff == "regeneration" || eff == "confusion" || eff == "jump" || eff == "heal" || eff == "harm" || eff === "damageBoost" || eff === "digSlowdown" || eff === "digSpeed" || eff === "movementSlowdown" || eff === "movementSpeed") {
+					if(!R.isNull(dur)) {
+						if(!R.isNull(amp)) {
+							if(!R.isNull(amb)) {
+								if(!R.isNull(parts)) {
+									Entity.addEffect(getPlayerEnt(),MobEffect. + eff,dur*20,amp,amp,parts);
+									
+								} else {
+									Entity.addEffect(getPlayerEnt(),MobEffect. + eff,dur*20,amp,amb,true);
+								}
 							} else {
-								Entity.addEffect(getPlayerEnt(),eff,dur*20,amp,amb,true);
-							}
+								if(!R.isNull(parts)) {
+									Entity.addEffect(getPlayerEnt(),MobEffect. + eff,dur*20,amp,false,parts);	
+								} else {
+									Entity.addEffect(getPlayerEnt(),MobEffect. + eff,dur*20,amp,false,true);
+								}
+							}	
 						} else {
-							if(!R.isNull(parts)) {
-								Entity.addEffect(getPlayerEnt(),eff,dur*20,amp,false,parts);	
+							if(!R.isNull(amb)) {
+								if(!R.isNull(parts)) {
+									Entity.addEffect(getPlayerEnt(),MobEffect. + eff,dur*20,1,amb,parts);	
+								} else {
+									Entity.addEffect(getPlayerEnt(),MobEffect. + eff,dur*20,1,amb,true);
+								}
 							} else {
-								Entity.addEffect(getPlayerEnt(),eff,dur*20,amp,false,true);
+								if(!R.isNull(parts)) {
+									Entity.addEffect(getPlayerEnt(),MobEffect. + eff,dur*20,1,false,parts);	
+								} else {
+									Entity.addEffect(getPlayerEnt(),MobEffect. + eff,dur*20,1,false,true);
+								}
 							}
-						}	
+						}		
 					} else {
-						if(!R.isNull(amb)) {
-							if(!R.isNull(parts)) {
-								Entity.addEffect(getPlayerEnt(),eff,dur*20,1,amb,parts);	
+						if(!R.isNull(amp)) {
+							if(!R.isNull(amb)) {
+								if(!R.isNull(parts)) {
+									Entity.addEffect(getPlayerEnt(),MobEffect. + eff,60*20,amp,amp,parts);	
+								} else {
+									Entity.addEffect(getPlayerEnt(),MobEffect. + eff,60*20,amp,amb,true);
+								}
 							} else {
-								Entity.addEffect(getPlayerEnt(),eff,dur*20,1,amb,true);
-							}
+								if(!R.isNull(parts)) {
+									Entity.addEffect(getPlayerEnt(),MobEffect. + eff,60*20,amp,false,parts);	
+								} else {
+									Entity.addEffect(getPlayerEnt(),MobEffect. + eff,60*20,amp,false,true);
+								}
+							}	
 						} else {
-							if(!R.isNull(parts)) {
-								Entity.addEffect(getPlayerEnt(),eff,dur*20,1,false,parts);	
+							if(!R.isNull(amb)) {
+								if(!R.isNull(parts)) {
+									Entity.addEffect(getPlayerEnt(),MobEffect. + eff,60*20,1,amb,parts);	
+								} else {
+									Entity.addEffect(getPlayerEnt(),MobEffect. + eff,60*20,1,amb,true);
+								}
 							} else {
-								Entity.addEffect(getPlayerEnt(),eff,dur*20,1,false,true);
+								if(!R.isNull(parts)) {
+									Entity.addEffect(getPlayerEnt(),MobEffect. + eff,60*20,1,false,parts);	
+								} else {
+									Entity.addEffect(getPlayerEnt(),MobEffect. + eff,60*20,1,false,true);
+								}
 							}
 						}
-					}		
-				} else {
-					if(!R.isNull(amp)) {
-						if(!R.isNull(amb)) {
-							if(!R.isNull(parts)) {
-								Entity.addEffect(getPlayerEnt(),eff,60*20,amp,amp,parts);	
+					}
+				} else { 
+					if(!R.isNull(dur)) {
+						if(!R.isNull(amp)) {
+							if(!R.isNull(amb)) {
+								if(!R.isNull(parts)) {
+									Entity.addEffect(getPlayerEnt(),,dur*20,amp,amp,parts);
+									
+								} else {
+									Entity.addEffect(getPlayerEnt(),eff,dur*20,amp,amb,true);
+								}
 							} else {
-								Entity.addEffect(getPlayerEnt(),eff,60*20,amp,amb,true);
-							}
+								if(!R.isNull(parts)) {
+									Entity.addEffect(getPlayerEnt(),eff,dur*20,amp,false,parts);	
+								} else {
+									Entity.addEffect(getPlayerEnt(),eff,dur*20,amp,false,true);
+								}
+							}	
 						} else {
-							if(!R.isNull(parts)) {
-								Entity.addEffect(getPlayerEnt(),eff,60*20,amp,false,parts);	
+							if(!R.isNull(amb)) {
+								if(!R.isNull(parts)) {
+									Entity.addEffect(getPlayerEnt(),eff,dur*20,1,amb,parts);	
+								} else {
+									Entity.addEffect(getPlayerEnt(),eff,dur*20,1,amb,true);
+								}
 							} else {
-								Entity.addEffect(getPlayerEnt(),eff,60*20,amp,false,true);
+								if(!R.isNull(parts)) {
+									Entity.addEffect(getPlayerEnt(),eff,dur*20,1,false,parts);	
+								} else {
+									Entity.addEffect(getPlayerEnt(),eff,dur*20,1,false,true);
+								}
 							}
-						}	
+						}		
 					} else {
-						if(!R.isNull(amb)) {
-							if(!R.isNull(parts)) {
-								Entity.addEffect(getPlayerEnt(),eff,60*20,1,amb,parts);	
+						if(!R.isNull(amp)) {
+							if(!R.isNull(amb)) {
+								if(!R.isNull(parts)) {
+									Entity.addEffect(getPlayerEnt(),eff,60*20,amp,amp,parts);	
+								} else {
+									Entity.addEffect(getPlayerEnt(),eff,60*20,amp,amb,true);
+								}
 							} else {
-								Entity.addEffect(getPlayerEnt(),eff,60*20,1,amb,true);
-							}
+								if(!R.isNull(parts)) {
+									Entity.addEffect(getPlayerEnt(),eff,60*20,amp,false,parts);	
+								} else {
+									Entity.addEffect(getPlayerEnt(),eff,60*20,amp,false,true);
+								}
+							}	
 						} else {
-							if(!R.isNull(parts)) {
-								Entity.addEffect(getPlayerEnt(),eff,60*20,1,false,parts);	
+							if(!R.isNull(amb)) {
+								if(!R.isNull(parts)) {
+									Entity.addEffect(getPlayerEnt(),eff,60*20,1,amb,parts);	
+								} else {
+									Entity.addEffect(getPlayerEnt(),eff,60*20,1,amb,true);
+								}
 							} else {
-								Entity.addEffect(getPlayerEnt(),eff,60*20,1,false,true);
+								if(!R.isNull(parts)) {
+									Entity.addEffect(getPlayerEnt(),eff,60*20,1,false,parts);	
+								} else {
+									Entity.addEffect(getPlayerEnt(),eff,60*20,1,false,true);
+								}
 							}
 						}
 					}
@@ -73,29 +140,29 @@ R = {
 					if(!R.isNull(amp)) {
 						if(!R.isNull(amb)) {
 							if(!R.isNull(parts)) {
-								Entity.addEffect(getPlayerEnt(),eff,dur*20,amp,amp,parts);	
+								Entity.addEffect(ent,eff,dur*20,amp,amp,parts);	
 							} else {
-								Entity.addEffect(getPlayerEnt(),eff,dur*20,amp,amb,true);
+								Entity.addEffect(ent,eff,dur*20,amp,amb,true);
 							}
 						} else {
 							if(!R.isNull(parts)) {
-								Entity.addEffect(getPlayerEnt(),eff,dur*20,amp,false,parts);	
+								Entity.addEffect(ent,eff,dur*20,amp,false,parts);	
 							} else {
-								Entity.addEffect(getPlayerEnt(),eff,dur*20,amp,false,true);
+								Entity.addEffect(ent,eff,dur*20,amp,false,true);
 							}
 						}	
 					} else {
 						if(!R.isNull(amb)) {
 							if(!R.isNull(parts)) {
-								Entity.addEffect(getPlayerEnt(),eff,dur*20,1,amb,parts);	
+								Entity.addEffect(ent,eff,dur*20,1,amb,parts);	
 							} else {
-								Entity.addEffect(getPlayerEnt(),eff,dur*20,1,amb,true);
+								Entity.addEffect(ent,eff,dur*20,1,amb,true);
 							}
 						} else {
 							if(!R.isNull(parts)) {
-								Entity.addEffect(getPlayerEnt(),eff,dur*20,1,false,parts);	
+								Entity.addEffect(ent,eff,dur*20,1,false,parts);	
 							} else {
-								Entity.addEffect(getPlayerEnt(),eff,dur*20,1,false,true);
+								Entity.addEffect(ent,eff,dur*20,1,false,true);
 							}
 						}
 					}		
@@ -103,36 +170,36 @@ R = {
 					if(!R.isNull(amp)) {
 						if(!R.isNull(amb)) {
 							if(!R.isNull(parts)) {
-								Entity.addEffect(getPlayerEnt(),eff,60*20,amp,amp,parts);	
+								Entity.addEffect(ent,eff,60*20,amp,amp,parts);	
 							} else {
-								Entity.addEffect(getPlayerEnt(),eff,60*20,amp,amb,true);
+								Entity.addEffect(ent,eff,60*20,amp,amb,true);
 							}
 						} else {
 							if(!R.isNull(parts)) {
-								Entity.addEffect(getPlayerEnt(),eff,60*20,amp,false,parts);	
+								Entity.addEffect(ent,eff,60*20,amp,false,parts);	
 							} else {
-								Entity.addEffect(getPlayerEnt(),eff,60*20,amp,false,true);
+								Entity.addEffect(ent,eff,60*20,amp,false,true);
 							}
 						}	
 					} else {
 						if(!R.isNull(amb)) {
 							if(!R.isNull(parts)) {
-								Entity.addEffect(getPlayerEnt(),eff,60*20,1,amb,parts);	
+								Entity.addEffect(ent,eff,60*20,1,amb,parts);	
 							} else {
-								Entity.addEffect(getPlayerEnt(),eff,60*20,1,amb,true);
+								Entity.addEffect(ent,eff,60*20,1,amb,true);
 							}
 						} else {
 							if(!R.isNull(parts)) {
-								Entity.addEffect(getPlayerEnt(),eff,60*20,1,false,parts);	
+								Entity.addEffect(ent,eff,60*20,1,false,parts);	
 							} else {
-								Entity.addEffect(getPlayerEnt(),eff,60*20,1,false,true);
+								Entity.addEffect(ent,eff,60*20,1,false,true);
 							}
 						}
 					}
 				}
 			}
 		}
-	}
+	},
 	x:function() {
 		getPlayerX();;
 	},
