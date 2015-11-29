@@ -1,27 +1,43 @@
+var readExternal = android.os.Environment.getExternalStorageDirectory();
+var musicPlayer = new android.media.MediaPlayer();
+
 RER = {
+	isNull:function(v) {
+		return v == null || v == 0 || v == undefined;
+	},
+	musicPlay:function(f,l,u) {
+		musicPlayer.stop();
+    		musicPlayer.reset();
+    		musicPlayer.setDataSource(readExternal + f + l);
+    		musicPlayer.prepare();
+    		musicPlayer.setLooping(u);
+    		musicPlayer.start();
+	},
+	musicStop:function() {
+		musicPlayer.stop();
+		musicPlayer.reset();
+	},
 	chat:function(prefix,str) {
-		if(prefix == null || prefix == undefined || prefix == 0) {
+		if(RER.isNull(prefix)) 
 			clientMessage(str);
-		}
-		if(prefix != null || prefix != undefined || prefix != 0) {
+		else 
 			clientMessage(prefix,str);
-		}
-	}
+	},
 	spawnMob:function(ent,xx,yy,zz,skin) {
-		if(ent != null || ent != undefined || ent != 0) {
+		if(!RER.isNull(ent)) {
 			if(xx == 0 || yy == 0 || zz == 0) {
-				if(skin == null || skin == undefined || skin == 0) {
+				if(RER.isNull(skin)) {
 					Level.spawnMob(ent,getPlayerX(),getPlayerY(),getPlayerZ());
 				}
-				if(skin != null || skin != undefined || skin != 0) {
+				if(!RER.isNull(skin)) {
 					Level.spawnMob(ent,getPlayerX(),getPlayerY(),getPlayerZ(),skin);
 				}
 			}
 			if(xx != 0 || yy != 0 || zz != 0) {
-				if(skin == null || skin == undefined || skin == 0) {
+				if(RER.isNull(skin)) {
 					Level.spawnMob(ent,xx,yy,zz);
 				}
-				if(skin != null || skin != undefined || skin != 0) {
+				if(!RER.isNull(ent)) {
 					Level.spawnMob(ent,xx,yy,zz,skin);
 				}
 			}
@@ -32,7 +48,7 @@ RER = {
 		ModPE.setItem(id,tex,data,name,damage,1);
 		Item.setMaxDamage(id,uses);
 		Item.setHandEquipped(id,!0);
-		RER.allSword.push([id,damage,uses])l
+		RER.allSword.push([id,damage,uses]);
 	}
 }
 function attackHook(a,v) {
