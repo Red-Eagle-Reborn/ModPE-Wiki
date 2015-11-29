@@ -2,6 +2,137 @@ var readExternal = android.os.Environment.getExternalStorageDirectory();
 var musicPlayer = new android.media.MediaPlayer();
 
 R = {
+	addEffect:function(ent,eff,dur,amp,amb,parts) {
+		if(R.isNull(ent)) {
+			if(!R.isNull(eff)) {
+				if(!R.isNull(dur)) {
+					if(!R.isNull(amp)) {
+						if(!R.isNull(amb)) {
+							if(!R.isNull(parts)) {
+								Entity.addEffect(getPlayerEnt(),eff,dur*20,amp,amp,parts);	
+							} else {
+								Entity.addEffect(getPlayerEnt(),eff,dur*20,amp,amb,true);
+							}
+						} else {
+							if(!R.isNull(parts)) {
+								Entity.addEffect(getPlayerEnt(),eff,dur*20,amp,false,parts);	
+							} else {
+								Entity.addEffect(getPlayerEnt(),eff,dur*20,amp,false,true);
+							}
+						}	
+					} else {
+						if(!R.isNull(amb)) {
+							if(!R.isNull(parts)) {
+								Entity.addEffect(getPlayerEnt(),eff,dur*20,1,amb,parts);	
+							} else {
+								Entity.addEffect(getPlayerEnt(),eff,dur*20,1,amb,true);
+							}
+						} else {
+							if(!R.isNull(parts)) {
+								Entity.addEffect(getPlayerEnt(),eff,dur*20,1,false,parts);	
+							} else {
+								Entity.addEffect(getPlayerEnt(),eff,dur*20,1,false,true);
+							}
+						}
+					}		
+				} else {
+					if(!R.isNull(amp)) {
+						if(!R.isNull(amb)) {
+							if(!R.isNull(parts)) {
+								Entity.addEffect(getPlayerEnt(),eff,60*20,amp,amp,parts);	
+							} else {
+								Entity.addEffect(getPlayerEnt(),eff,60*20,amp,amb,true);
+							}
+						} else {
+							if(!R.isNull(parts)) {
+								Entity.addEffect(getPlayerEnt(),eff,60*20,amp,false,parts);	
+							} else {
+								Entity.addEffect(getPlayerEnt(),eff,60*20,amp,false,true);
+							}
+						}	
+					} else {
+						if(!R.isNull(amb)) {
+							if(!R.isNull(parts)) {
+								Entity.addEffect(getPlayerEnt(),eff,60*20,1,amb,parts);	
+							} else {
+								Entity.addEffect(getPlayerEnt(),eff,60*20,1,amb,true);
+							}
+						} else {
+							if(!R.isNull(parts)) {
+								Entity.addEffect(getPlayerEnt(),eff,60*20,1,false,parts);	
+							} else {
+								Entity.addEffect(getPlayerEnt(),eff,60*20,1,false,true);
+							}
+						}
+					}
+				}
+			}
+		} else {
+			if(!R.isNull(eff)) {
+				if(!R.isNull(dur)) {
+					if(!R.isNull(amp)) {
+						if(!R.isNull(amb)) {
+							if(!R.isNull(parts)) {
+								Entity.addEffect(getPlayerEnt(),eff,dur*20,amp,amp,parts);	
+							} else {
+								Entity.addEffect(getPlayerEnt(),eff,dur*20,amp,amb,true);
+							}
+						} else {
+							if(!R.isNull(parts)) {
+								Entity.addEffect(getPlayerEnt(),eff,dur*20,amp,false,parts);	
+							} else {
+								Entity.addEffect(getPlayerEnt(),eff,dur*20,amp,false,true);
+							}
+						}	
+					} else {
+						if(!R.isNull(amb)) {
+							if(!R.isNull(parts)) {
+								Entity.addEffect(getPlayerEnt(),eff,dur*20,1,amb,parts);	
+							} else {
+								Entity.addEffect(getPlayerEnt(),eff,dur*20,1,amb,true);
+							}
+						} else {
+							if(!R.isNull(parts)) {
+								Entity.addEffect(getPlayerEnt(),eff,dur*20,1,false,parts);	
+							} else {
+								Entity.addEffect(getPlayerEnt(),eff,dur*20,1,false,true);
+							}
+						}
+					}		
+				} else {
+					if(!R.isNull(amp)) {
+						if(!R.isNull(amb)) {
+							if(!R.isNull(parts)) {
+								Entity.addEffect(getPlayerEnt(),eff,60*20,amp,amp,parts);	
+							} else {
+								Entity.addEffect(getPlayerEnt(),eff,60*20,amp,amb,true);
+							}
+						} else {
+							if(!R.isNull(parts)) {
+								Entity.addEffect(getPlayerEnt(),eff,60*20,amp,false,parts);	
+							} else {
+								Entity.addEffect(getPlayerEnt(),eff,60*20,amp,false,true);
+							}
+						}	
+					} else {
+						if(!R.isNull(amb)) {
+							if(!R.isNull(parts)) {
+								Entity.addEffect(getPlayerEnt(),eff,60*20,1,amb,parts);	
+							} else {
+								Entity.addEffect(getPlayerEnt(),eff,60*20,1,amb,true);
+							}
+						} else {
+							if(!R.isNull(parts)) {
+								Entity.addEffect(getPlayerEnt(),eff,60*20,1,false,parts);	
+							} else {
+								Entity.addEffect(getPlayerEnt(),eff,60*20,1,false,true);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 	x:function() {
 		getPlayerX();;
 	},
