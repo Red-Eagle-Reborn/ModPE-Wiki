@@ -2,6 +2,65 @@ var readExternal = android.os.Environment.getExternalStorageDirectory();
 var musicPlayer = new android.media.MediaPlayer();
 
 R = {
+	getData:function(x,y,z) {
+		if(!R.isNull(x) && !R.isNull(y) && !R.isNull(z)) Level.getData(x,y,z);
+			
+	}
+	worldDir:function() {
+		Level.getWorldDir();
+	},
+	worldName:function() {
+		Level.getWorldName();
+	},
+	addItem:function(i,a,d) {
+		if(!R.isNull(i)) {
+			if(!R.isNull(a)) {
+				if(!R.isNull(d)) {
+					Player.addItemInventory(i,a,d);
+				} else {
+					Player.addItemInventory(i,a,0);
+				}
+			} else {
+				if(!R.isNull(d)) {
+					Player.addItemInventory(i,1,d);
+				} else {
+					Player.addItemInventory(i,1,0);
+				}	
+			}
+		}
+	},
+	creativeItem:function(i,a,d) {
+		if(!R.isNull(i)) {
+			if(!R.isNull(a)) {
+				if(!R.isNull(d)) {
+					Player.addItemCreativeInv(i,a,d);
+				} else {
+					Player.addItemCreativeInv(i,a,0);
+				}
+			} else {
+				if(!R.isNull(d)) {
+					Player.addItemCreativeInv(i,1,d);
+				} else {
+					Player.addItemCreativeInv(i,1,0);
+				}	
+			}
+		}
+	},
+	setCanFly:function(t) {
+		if(!R.isNull(t)) {
+			if(t == 1 || t == true) {
+				Player.setCanFly(1);
+			}
+			if(t == 0 || t == false) {
+				Player.setCanFly(0);
+			}
+		}
+	},
+	setNameTag:function(e,n) {
+		if(!R.isNull(e) && !R.isNull(n)) {
+			Entity.setNameTag(e,n);
+		}
+	},
 	getAge:function(e) {
 		if(!R.isNull(e)) {
 			Entity.getAnimalAge(e);
