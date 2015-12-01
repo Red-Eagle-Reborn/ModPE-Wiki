@@ -23,7 +23,7 @@ R = {
 	},
 	getGm:function() {
 		Level.getGameMode();
-	}
+	},
 	getData:function(x,y,z) {
 		if(!R.isNull(x) && !R.isNull(y) && !R.isNull(z)) Level.getData(x,y,z);
 			
